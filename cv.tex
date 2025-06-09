@@ -1,0 +1,164 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.25cm, vmargin=0.3cm}
+\columnratio{0.7, 0.3}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+	
+	\vspace*{\fill}
+	
+	\begin{paracol}{2}
+		
+		% Name & headline
+		\heading{Kirill Madorskii}{MIPT undergraduate \\ Bachelor of Applied Mathematics \& Physics}
+		
+		\switchcolumn
+		
+		% Identity card
+		\vspace{0.021\textheight}
+		\begin{supertabular}{ll}
+			\footnotesize\faPhone & +7(911)-160-1049 \\
+			\footnotesize\faEnvelope & \href{mailto:madorskii.kv@phystech.edu}{madorskii.kv@phystech.edu} \\
+			\footnotesize\faGithub & \href{https://github.com/spike-18}{spike-18} \\
+		\end{supertabular}
+		
+		\switchcolumn
+		
+		\section{profile}
+		
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Third-year MIPT student
+			\item Successfully finished Machine Learning course
+			\item Achieved excellent marks as team lead in Computer Science group projects
+			\item Looking for research opportunities or internships in applied ML or data-driven systems
+		\end{itemize}
+		
+		\section{education}
+		
+		\entry{Bachelor of Applied Mathematics \& Physics}{MIPT -- Department of Radio Engineering and Cybernetics}{2022 -- 2026}{     }
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item GPA: 8.5/10.0
+			\item GPA (Computer Science): 8.8/10.0
+		\end{itemize}
+		
+		
+		\section{experience}
+		
+		\entry{IITP}{Data Scientist, Intern}{Moscow, Russia}{July-September 2024}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Researched the coherence between nuclear explosions and recorded earthquakes (ANSS, ISC).
+			\item Implemented several methods for analyzing earthquake catalogs.
+		\end{itemize}
+		
+		\switchcolumn
+		
+		\section{skills}
+		\begin{supertabular}{rl}
+			\tableentry{\footnotesize\faCode}{C/C++ \textperiodcentered{} x86-64 Assembly}{}
+			\tableentry{}{Python \textperiodcentered{} CMake \textperiodcentered{} Git}{}
+			\tableentry{}{Linux
+				\textperiodcentered{} LaTeX \textperiodcentered{} perf}{}
+			\tableentry{}{Poetry \textperiodcentered{} PyTorch}{}
+			
+			
+			\tableentry{}{}{}
+			
+			\tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} advanced}{}
+			\tableentry{}{Russian \textperiodcentered{} native}{}
+			\tableentry{}{}{}
+			
+			\tableentry{\footnotesize\faComments}{flexibility \textperiodcentered{} conflict resolution}{}
+			\tableentry{}{problem-solving \textperiodcentered{} leadership}{}
+			\tableentry{}{adaptability \textperiodcentered{} responsibility}{}
+		\end{supertabular}
+		
+		\section{interests}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Data Science
+			\item ML, DL
+			\item Artificial Intelligence
+			\item Research
+			\item Functional Programming
+		\end{itemize}
+		
+		\section{coursework}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=2pt]
+			\item Algorithms and Data Structures
+			\item Machine Learning
+			\item Linear Algebra
+			\item Probability Theory, Statistics
+			\item Operating Systems, Computer Architecture
+			\item Compiler Technology
+			\item Computational Mathematics
+			\item Quantum Mechanics, Physics
+		\end{itemize}
+		
+		\section{achievements}
+		\begin{supertabular}{rl}
+			\tableentry{2025}{\textbf{Winner's diploma}}{}
+			\tableentry{}{MIPT 'Space' Hackathon}{spaceafter}
+			\tableentry{2022}{\textbf{2nd degree diploma}}{}
+			\tableentry{}{MIPT 'Phystech' Olympiad}{}
+		\end{supertabular}		
+		
+		\switchcolumn
+		
+
+		
+		\section{main projects}
+		
+				
+		\entry{comp\_math \normalfont \footnotesize{(\href{https://github.com/spike-18/comp_math}{github.com/spike-18/comp\_math})}}{Tools: C++, CMake, Doxygen, Python}{ }{2025}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item C++ library providing various tools for computational mathematics tasks.
+		\end{itemize}
+
+		\entry{image-resampler \normalfont \footnotesize{(\href{https://github.com/spike-18/image-resampler}{github.com/spike-18/image-resampler})}}{Tools: Python, Poetry, Nox, Sphinx}{ }{2025}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Designed CLI + GUI toolkit offering image interpolation methods.
+		\end{itemize}
+
+		
+		\entry{EasyTensor \normalfont \footnotesize{(\href{https://github.com/spike-18/EasyTensor}{github.com/spike-18/EasyTensor})}}{Tools: C++, CMake, POSIX}{ }{2025}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item Built mini tensor‑compiler in C++ for Neural Network optimization.
+		\end{itemize}
+				
+		\entry{PoetRNN \normalfont \footnotesize{(\href{https://github.com/spike-18/PoetRNN}{github.com/spike-18/PoetRNN})}}{Tools: Jupyter Notebook, PyTorch, NumPy, Matplotlib}{ }{2024}
+		\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+			\item  Implemented character-level RNN/LSTM for poetry generation with custom data pipeline and evaluation.
+		\end{itemize}	
+		
+		\medskip
+
+		
+	\end{paracol}
+	
+\end{document}
